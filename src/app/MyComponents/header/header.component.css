@@ -1,0 +1,163 @@
+.header-container {
+    padding: 12px 50px;
+    margin-left: 100px;
+}
+
+img{
+    height: 60px;
+}
+
+.banner {
+    background: #003145; 
+    color: #fff;
+    /* width: 1px; */
+    height: 416px;
+    padding: 0;
+    margin: 0 0;
+}
+
+.banner-logo{
+   float: right;
+    /* width: 199.89px; */
+    height: 300px;
+    margin: 58px 142.11px 58px 0;
+    /* float: right; */
+}
+
+.banner-head{
+    display: inline;
+    position: absolute;
+    margin: 88px 0px 0px 150px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 63px;
+    /* identical to box height */
+    /* Celestial Hue/Celestial Light */
+}
+
+.banner-desc{
+    display: inline;
+    position: absolute;
+    width: 792px;
+    margin: 164px 0px 0px 150px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
+    
+    /* Celestial Hue/Celestial Light */
+    
+    color: #FFFFFF;
+}
+
+.banner-button:hover{
+    cursor: pointer;
+    color: #ccfba0f2;
+}
+
+.banner-button {
+    position: absolute;
+    margin: 276px 0px 0px 150px;
+    width: 194px;
+    height: 52px;
+    padding: 12px 18px;
+    text-align: center;
+    /* Celestial Green/CG 600 */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 175%;
+    /* identical to box height, or 28px */
+    
+    
+    /* Celestial Hue/Celestial Light */
+    
+    color: #FFFFFF;
+    background: #44924C;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+}
+
+select::-ms-expand {
+    display: none;
+  }
+
+.navbar {
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 60px;
+background-color: #f2f2f2;
+padding: 0 20px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 17px;
+line-height: 26px;
+text-align: center;
+color: #333333;
+/* margin: 8px 8px; */
+}
+
+.navbar-left a {
+text-decoration: none;
+color: #333;
+font-weight: bold;
+margin-right: 20px;
+border-bottom: 5px solid transparent;
+}
+
+.navbar-left a:active,
+.navbar-left a:not(:active):hover {
+border-bottom-color: green;
+}
+
+.navbar-left a.active {
+border-bottom-color: green;
+}
+
+.navbar-right form {
+display: flex;
+align-items: center;
+}
+
+
+.navbar-right input[type="text"] {
+padding: 8px 8px 8px 0px;
+border-width: 1px;
+border-style: solid;
+border-color: #666666;
+border-radius: 24px;
+margin-right: 5px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 17px;
+line-height: 26px;
+text-align: center;
+color: #333333;
+/* background-image: url("image");  */
+background-repeat: no-repeat;
+background-position: 10px center; 
+}
+
+.search-button{
+display: none;
+}
+
+
+.dropdown{
+border-width: 1px;
+border-style: solid;
+border-color: #666666;
+border-radius: 24px;
+width: 130px;
+background: rgb(255, 255, 255);
+}
+

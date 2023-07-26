@@ -1,0 +1,45 @@
+
+<div class="iform-container">
+
+<form #taskForm="ngForm" (ngSubmit)="getTaskFormData(taskForm.value)">
+    <div class="iform-head">
+        ADD NEW TASK
+    </div>
+    <div class="input-field">
+        <label for="title">Title</label>
+        <input name="title" ngModel id="title" type="text" placeholder="Title of your submission" required>
+    </div>
+
+    <div class="input-field">
+        <label for="description">Description</label>
+        <textarea name="description" ngModel id="description"  rows="4" cols="93" type="textarea" placeholder="Write a short description of task" required></textarea>
+    </div>
+
+    <div class="input-field field-column">
+        <label for="priority">Priority:</label>
+        <select id="priority" ngModel name="priority">
+        <option value="1">Low</option>
+        <option value="2">Medium</option>
+        <option value="3">High</option>
+        </select>
+    </div>
+
+    <div class="input-field field-column">
+        <label for="status">Status:</label>
+        <select id="status" ngModel name="status">
+        <option value="1">Todo</option>
+        <option value="2">In-progress</option>
+        <option value="3">Completed</option>
+        </select>
+    </div>
+
+    <div class="input-field field-column">
+        <label for="due_date">Due Date</label>
+        <input name="due_date" ngModel id="due-date" type="date" placeholder="Select end date" required>
+    </div>
+    <div class="input-button">
+    <button type="submit" class="upload-button" >Upload</button>
+    </div>
+
+</form>
+</div>

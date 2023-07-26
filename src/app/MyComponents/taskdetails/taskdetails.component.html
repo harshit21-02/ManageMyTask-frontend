@@ -1,0 +1,113 @@
+<div class="card-contain">
+    
+    <!-- <div *ngFor="let task of tasks"> -->
+      
+    <div class="card-item" >
+        <div class="card-head">
+            <img src="../../../assets/images/task_762686.png" class="card-icon" alt="card-logo">
+            
+        </div>
+        <div class="card-head">
+            <p style="font-size: 40px; display: inline; margin-left: 25%;"><b>{{tasks.title}}</b></p>
+        </div>
+
+        <div class="card-desc">
+            {{tasks.description}}
+        </div>
+
+        <div class="card-foot">
+            Priority: {{ tasks.priority === 1 ? 'High' : tasks.priority === 2 ? 'Medium' : 'Low' }}
+          </div>
+        <div class="card-foot">
+            Status: {{ tasks.status === 1 ? 'To-Do' : tasks.status === 2 ? 'In-Progress' : 'Completed' }}
+        </div>
+        <br>
+        <div class="card-foot" >Due till {{tasks.due_date}}
+    </div>
+    </div>
+    
+    <div class="input-button" style="text-align: center;"> 
+        <button type="submit" class="upload-button" (click)="deletetask()">Delete Task</button>
+    </div>
+
+    <br><br>
+    <br><br>
+    <div class = "card-item">
+        <form #taskdetailForm="ngForm" (ngSubmit)="updateTaskFormData(taskdetailForm.value)">
+            <div class="iform-head" style="text-align: center;  ">
+                <h3><b>You can Update your task here!</b></h3>
+            </div>
+            <div class="input-field">
+                <label for="title">Title</label>
+                <input name="title" [(ngModel)]="tasks.title" id="title" type="text" placeholder="{{tasks.title}}" required>
+            </div>
+        
+            <div class="input-field">
+                <label for="description">Description</label>
+                <textarea name="description" [(ngModel)]="tasks.description"  rows="4" cols="93" type="textarea" placeholder="{{tasks.description}}" required></textarea>
+            </div>
+        
+            <div class="input-field field-column">
+                <label for="priority">Priority:</label>
+                <select id="priority" [(ngModel)]="tasks.priority" name="priority" name="priority">
+                <option value="1">High</option>
+                <option value="2">Medium</option>
+                <option value="3">Low</option>
+                </select>
+            </div>
+        
+            <div class="input-field field-column">
+                <label for="status">Status:</label>
+                <select id="status" [(ngModel)]="tasks.status" name="status">
+                <option value="1">Todo</option>
+                <option value="2">In-progress</option>
+                <option value="3">Completed</option>
+                </select>
+            </div>
+        
+            <!-- <!-- <div class="input-field field-column">
+                <label for="due_date">Due Date</label>
+                <input name="due_date" [(ngModel)]="tasks.due_date" id="due-date" type="date" required>
+            </div> -->
+            <div class="input-button"> 
+            <button type="submit" class="upload-button" >Update Task Details</button>
+            </div>
+        
+        </form>
+    </div>
+        <br><br>
+        <h2 style="text-align: center;"><b>HISTORY</b></h2>
+        
+
+        <div class="history-card-item" *ngFor="let logs of history">
+
+            <div class="history-box" >
+                <h4><b>{{logs.action}}</b></h4>
+                <dl>
+                    <dt>
+                        {{logs.description}}
+                    </dt>
+                    <dd *ngIf="logs.changes">
+                        <ul *ngFor="let change_temp of logs.changes | keyvalue">
+                            <li >
+                                {{ change_temp.value }}
+                            </li>
+                        </ul>
+                    </dd>
+                    <dt>
+                        TIME
+                    </dt>
+                    <dd>
+                        {{logs.timestamp | date:'yyyy-MM-dd HH:mm:ss'}}
+                    </dd>
+                </dl>
+
+                
+            </div>
+        </div>
+
+</div>
+    <!-- <div class="card-item">
+        NO CARDS FOUND
+    </div> -->
+<!-- </div> -->
