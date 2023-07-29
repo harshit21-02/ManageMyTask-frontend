@@ -5,7 +5,6 @@
     width: min-content;
     background: #F5F5F5;
     padding: 24px 80px;
-    margin: 0px;
 } 
 
 .card-item{
@@ -23,8 +22,6 @@
     display: inline;
     overflow:hidden;
     height: 60px;
-    border-radius: 0px 0px;
-    /* font-family: 'Poppins'; */
     
 }
 
@@ -43,7 +40,6 @@
     width: 80px;
     height: 80px;
     margin-right: 50px;
-    /* padding-right: 24px; */
 }
 
 .card-desc{
@@ -57,9 +53,6 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 30px;
-    
-    /* Celestial Grey/CG 700 */
-    
     color: #333333;
 
 }
@@ -85,7 +78,6 @@
 
 div.card-contain a {
     color: #000000;
-    text-decoration: none;
 }
 
 
@@ -195,14 +187,13 @@ div.card-contain a {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 991px) {
     
 .card-contain{
     position: relative;
     height: 100px;
     width: 100%;
     padding: 10px 20px;
-    margin: 0px;
 } 
 
 .card-item{
@@ -229,11 +220,9 @@ div.card-contain a {
     width: 40px;
     height: 40px;
     margin-right: 50px;
-    /* padding-right: 24px; */
 }
 
 .card-desc{
-    overflow: scroll;
     width: auto;
     height: 120px;
     margin: 25px 0px;
@@ -248,7 +237,6 @@ div.card-contain a {
 }
 
 .card-foot{
-    float: right;
     padding: 4px 24px;
     font-weight: 400;
     font-size: 20px;
@@ -256,7 +244,6 @@ div.card-contain a {
 
 
 .history-container{
-    background: #f5f5f5;
     padding-top: 24px;
     display: block;
     width: 100%;
@@ -279,174 +266,6 @@ div.card-contain a {
 }
 }
 
-@media only screen and (min-width: 600px) {
-    
-.card-contain{
-    position: relative;
-    height: 100px;
-    width: 100%;
-    padding: 10px 40px;
-    margin: 0px;
-} 
-
-.card-item{
-    padding: 20px 20px;
-    width: 100%;
-    height: auto;
-    margin: 0px auto;
-    overflow: scroll;
-}
-
-.card-head{
-    display: inline;
-    overflow:hidden;
-    height: 35px;
-    
-}
-
-.card-title{
-    height: 35px;
-    font-size: 20px;
-}
-
-.card-icon{
-    width: 40px;
-    height: 40px;
-    margin-right: 50px;
-    /* padding-right: 24px; */
-}
-
-.card-desc{
-    overflow: scroll;
-    width: auto;
-    height: 120px;
-    margin: 25px 0px;
-    font-size: 24px;
-}
-
-.card-update{
-    float: left;
-    margin: 0 20px;
-    height: 80px;
-    padding: 0 15px;
-}
-
-.card-foot{
-    float: right;
-    padding: 4px 24px;
-    font-weight: 400;
-    font-size: 20px;
-}
-
-
-.history-container{
-    background: #f5f5f5;
-    padding-top: 24px;
-    display: block;
-    width: 100%;
-    float: left;
-    align-items: center;
-    padding: 10px 10px;
-    height: 600px;
-}
-
-.scroll-box{
-    overflow: scroll;
-    height: 600px;
-}
-
-.history-card-item{
-    padding: 50px 50px;
-    width: auto;
-    height: auto;
-    overflow: scroll;
-}
-}
-
-@media only screen and (min-width: 768px) {
- 
-.card-contain{
-    position: relative;
-    height: 100px;
-    width: 100%;
-    padding: 10px 20px;
-    margin: 0px;
-} 
-
-.card-item{
-    padding: 20px 20px;
-    width: auto;
-    height: auto;
-    margin: 0px auto;
-    overflow: scroll;
-}
-
-.card-head{
-    display: inline;
-    overflow:hidden;
-    height: 35px;
-    
-}
-
-.card-title{
-    height: 35px;
-    font-size: 20px;
-}
-
-.card-icon{
-    width: 40px;
-    height: 40px;
-    margin-right: 50px;
-    /* padding-right: 24px; */
-}
-
-.card-desc{
-    overflow: scroll;
-    width: auto;
-    height: 120px;
-    margin: 25px 0px;
-    font-size: 24px;
-}
-
-.card-update{
-    float: left;
-    margin: 0 20px;
-    height: 80px;
-    padding: 0 15px;
-}
-
-.card-foot{
-    float: right;
-    padding: 4px 24px;
-    font-weight: 400;
-    font-size: 20px;
-}
-
-
-.history-container{
-    background: #f5f5f5;
-    padding-top: 24px;
-    display: block;
-    width: 100%;
-    float: left;
-    align-items: center;
-    padding: 10px 10px;
-    height: 600px;
-}
-
-.scroll-box{
-    overflow: scroll;
-    height: 600px;
-}
-
-.history-card-item{
-    padding: 50px 50px;
-    width: auto;
-    height: auto;
-    overflow: scroll;
-}
-
-}
 
 @media only screen and (min-width: 992px) {
     
@@ -454,16 +273,12 @@ div.card-contain a {
     position: absolute;
     height: 1300px;
     width: 65%;
-    background: #F5F5F5;
     padding: 24px 80px;
     margin: 0px;
 } 
 
 .card-item{
     float: left;
-    background: #FFFFFF;
-    box-shadow: 0px 3px 24px rgba(132, 132, 132, 0.16), inset 0px -3px 6px rgba(0, 0, 0, 0.06);
-    border-radius: 16px;
     padding: 50px 50px;
     width: 100%;
     height: auto;
@@ -474,8 +289,6 @@ div.card-contain a {
     display: inline;
     overflow:hidden;
     height: 60px;
-    border-radius: 0px 0px;
-    /* font-family: 'Poppins'; */
     
 }
 
@@ -483,10 +296,7 @@ div.card-contain a {
     display: inline;
     overflow:hidden;
     height: 80px;
-    font-style: normal;
-    font-weight: 500;
     font-size: 20px;
-    line-height: 30px;
 }
 
 .card-icon{
@@ -494,7 +304,6 @@ div.card-contain a {
     width: 80px;
     height: 80px;
     margin-right: 50px;
-    /* padding-right: 24px; */
 }
 
 .card-desc{
@@ -502,16 +311,7 @@ div.card-contain a {
     width: auto;
     height: 120px;
     margin: 25px 0px;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
     font-size: 24px;
-    line-height: 30px;
-    
-    /* Celestial Grey/CG 700 */
-    
-    color: #333333;
 
 }
 
@@ -525,23 +325,11 @@ div.card-contain a {
 .card-foot{
     float: right;
     padding: 0px 24px;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 400;
     font-size: 20px;
-    line-height: 17px;
-
-    color: #666666;
-}
-
-div.card-contain a {
-    color: #000000;
-    text-decoration: none;
 }
 
 
 .history-container{
-    background: #f5f5f5;
     padding-top: 24px;
     display: inline;
     width: 38%;
@@ -557,136 +345,11 @@ div.card-contain a {
 }
 
 .history-card-item{
-    background: #FFFFFF;
-    box-shadow: 0px 3px 24px rgba(132, 132, 132, 0.16), inset 0px -3px 6px rgba(0, 0, 0, 0.06);
-    border-radius: 16px;
     padding: 50px 50px;
     width: auto;
     height: auto;
     margin: 0px auto;
     overflow: scroll;
 }
-
-}
-
-@media only screen and (min-width: 1200px) {
-    
-.card-contain{
-    position: absolute;
-    height: 1300px;
-    width: 65%;
-    background: #F5F5F5;
-    padding: 24px 80px;
-    margin: 0px;
-} 
-
-.card-item{
-    float: left;
-    background: #FFFFFF;
-    box-shadow: 0px 3px 24px rgba(132, 132, 132, 0.16), inset 0px -3px 6px rgba(0, 0, 0, 0.06);
-    border-radius: 16px;
-    padding: 50px 50px;
-    width: 100%;
-    height: auto;
-    margin: 0px auto;
-}
-
-.card-head{
-    display: inline;
-    overflow:hidden;
-    height: 60px;
-    border-radius: 0px 0px;
-    /* font-family: 'Poppins'; */
-    
-}
-
-.card-title{
-    display: inline;
-    overflow:hidden;
-    height: 80px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
-}
-
-.card-icon{
-    border-radius: 8px;
-    width: 80px;
-    height: 80px;
-    margin-right: 50px;
-    /* padding-right: 24px; */
-}
-
-.card-desc{
-    overflow: scroll;
-    width: auto;
-    height: 120px;
-    margin: 25px 0px;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 30px;
-    
-    /* Celestial Grey/CG 700 */
-    
-    color: #333333;
-
-}
-
-.card-update{
-    float: left;
-    margin: 0 20px;
-    height: 80px;
-    padding: 0 15px;
-}
-
-.card-foot{
-    float: right;
-    padding: 0px 24px;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 17px;
-
-    color: #666666;
-}
-
-div.card-contain a {
-    color: #000000;
-    text-decoration: none;
-}
-
-
-.history-container{
-    background: #f5f5f5;
-    padding-top: 24px;
-    display: inline;
-    width: 38%;
-    float: right;
-    align-items: center;
-    padding: 10px 20px;
-    height: 1300px;
-}
-
-.scroll-box{
-    overflow: scroll;
-    height: 1200px;
-}
-
-.history-card-item{
-    background: #FFFFFF;
-    box-shadow: 0px 3px 24px rgba(132, 132, 132, 0.16), inset 0px -3px 6px rgba(0, 0, 0, 0.06);
-    border-radius: 16px;
-    padding: 50px 50px;
-    width: auto;
-    height: auto;
-    margin: 0px auto;
-    overflow: scroll;
-}
-
 
 }
