@@ -28,12 +28,13 @@ export class TaskdetailsComponent {
 
       this.taskList.taskdetails(id).subscribe((result)=>{
         // console.warn(result)
-        this.tasks=result
+        this.tasks=result;
         this.priority = this.tasks.priority
-        this.status = this.tasks.status
+        this.status = this.tasks.status;
+        
       })
-      this.taskList.history(id).subscribe((result)=>{
-        this.history=result
+      this.taskList.history(id).subscribe((result:any)=>{ 
+        this.history=result.reverse();
       })
     });
   }
@@ -42,13 +43,13 @@ export class TaskdetailsComponent {
   {
     // console.warn(this.tasks.pk)
     data['pk']=this.tasks.id
-    this.taskList.updatetask(data).subscribe((result)=>{
+    this.taskList.updatetask(data).subscribe((result:any)=>{  
       
-      this.tasks = result; // Update the local tasks data with the response
+      this.tasks =result; // Update the local tasks data with the response
       this.changeDetectorRef.detectChanges();
 
-      this.taskList.history(this.tasks.id).subscribe((result)=>{
-        this.history=result
+      this.taskList.history(this.tasks.id).subscribe((result:any)=>{
+        this.history=result.reverse();
       })
    })
   }
@@ -56,9 +57,8 @@ export class TaskdetailsComponent {
   deletetask()
   {
    this.taskList.deletetask(this.tasks.id).subscribe((result)=>{
-     this.history=result
-     console.warn(result)
+     console.warn(result);
+     this.router.navigateByUrl('/');
    })
-   this.router.navigateByUrl('');
   }
 }

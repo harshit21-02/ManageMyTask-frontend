@@ -1,10 +1,6 @@
-
 .card-contain{
     position: relative;
-    height: 1000px;
-    background: #F5F5F5;
-    padding: 24px 150px;
-    margin: 0;
+    padding: 48px 150px;
 }
 
 .card-item{
@@ -13,42 +9,39 @@
     box-shadow: 0px 3px 24px rgba(132, 132, 132, 0.16), inset 0px -3px 6px rgba(0, 0, 0, 0.06);
     border-radius: 16px;
     padding: 24px 24px;
-    width: 400px;
+    width: 360px;
     height: 380px;
-    margin: 0px 30px 50px 0px;
+    margin: 0px 20px 40px 20px;
 }
 
 .card-head{
+    height: 80px;
+    overflow: hidden;
+}
+.title{
+    display: inline;
     overflow:hidden;
-    height: 100px;
-    border-radius: 0px 0px;
-    font-family: 'Poppins';
+    height: 80px;
     font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 24px;
     line-height: 30px;
 }
 
 .card-icon{
-    border-radius: 8px;
     width: 80px;
     height: 80px;
     margin-right: 24px;
-    /* padding-right: 24px; */
 }
 
 .card-desc{
-    width: 312px;
+    overflow: hidden;
+    width: auto;
     height: 90px;
     margin: 48px 0px;
-
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 19px;
-    
-    /* Celestial Grey/CG 700 */
     
     color: #333333;
 
@@ -56,12 +49,12 @@
 
 .card-foot{
     float: right;
-    padding: 0px 24px;
-
+    padding: 5px 12px;
+    margin-right: 0px;
     font-family: 'Inter';
     font-style: italic;
-    font-weight: 400;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 16px;
     line-height: 17px;
 
     color: #666666;
@@ -78,9 +71,6 @@ div.card-contain a {
     }
 
     
-select::-ms-expand {
-    display: none;
-  }
 
 .navbar {
 
@@ -101,10 +91,11 @@ color: #333333;
 }
 
 .navbar-left a {
+    float: left;
 text-decoration: none;
 color: #333;
 font-weight: bold;
-margin-right: 20px;
+margin-right: 0;
 border-bottom: 5px solid transparent;
 }
 
@@ -123,36 +114,357 @@ align-items: center;
 }
 
 
-.navbar-right input[type="text"] {
-padding: 8px 8px 8px 0px;
-border-width: 1px;
-border-style: solid;
-border-color: #666666;
-border-radius: 24px;
-margin-right: 5px;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 17px;
-line-height: 26px;
-text-align: center;
-color: #333333;
-/* background-image: url("image");  */
-background-repeat: no-repeat;
-background-position: 10px center; 
+.sort-order
+{
+    height: 40px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #666666;
+    border-radius: 24px;
+    width: 160px;
+    background: rgb(255, 255, 255);
+    text-align: center;
 }
 
-.search-button{
-display: none;
+.active a{
+    border-bottom-color: green;
 }
 
-
-.dropdown{
-border-width: 1px;
-border-style: solid;
-border-color: #666666;
-border-radius: 24px;
-width: 130px;
-background: rgb(255, 255, 255);
+a:hover{
+    cursor: pointer;
 }
 
+button {
+    width: auto;
+    height: 70%;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 175%;
+    color: #FFFFFF;
+    background: #44924C;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px)
+{
+    .card-contain{
+        padding: 48px 24px;
+    }
+
+    .card-item{
+        width: 100%;
+        height: 250px;
+        margin: 10px auto;
+    }
+    
+    .card-head{
+        height: 40px;
+    }
+    .title{
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .card-icon{
+        width: 40px;
+        height: 40px;
+        margin-right: 24px;
+    }
+    
+    .card-desc{
+        width: auto;
+        height: 40px;
+        margin: 24px 0px;
+        font-size: 18px;
+    }
+    
+    .card-foot{
+        padding: 5px 12px;
+        font-size: 14px;
+    }
+
+    .navbar {
+    height: 40px;
+    padding: 0 20px;
+    font-size: 14px;
+    }
+    
+    .navbar-left a {
+    margin-right: 0;
+    }
+    
+    
+    .navbar-right{
+        font-size: 13px;
+    }
+    
+    
+    .sort-order
+    {
+        height: 20px;
+        width: 80px;
+        font-size: 13px;
+    }
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+    .card-contain{
+        padding: 48px 24px;
+        /* align-items: center; */
+    }
+
+    .card-item{
+        width: 43%;
+        height: 250px;
+    }
+    
+    .card-head{
+        height: 50px;
+    }
+    .title{
+        height: 40px;
+        font-size: 21px;
+    }
+    
+    .card-icon{
+        width: 50px;
+        height: 50px;
+        margin-right: 24px;
+    }
+    
+    .card-desc{
+        width: auto;
+        height: 40px;
+        margin: 24px 0px;
+        font-size: 18px;
+    }
+    
+    .card-foot{
+        padding: 5px 12px;
+        font-size: 14px;
+    }
+
+    .navbar {
+    height: 40px;
+    padding: 0 20px;
+    font-size: 14px;
+    }
+    
+    .navbar-left a {
+    margin-right: 0;
+    }
+    
+    
+    .navbar-right{
+        font-size: 14px;
+    }
+    
+    
+    .sort-order
+    {
+        height: 20px;
+        width: 80px;
+        font-size: 14px;
+    }
+   
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+     
+    .card-contain{
+    }
+
+    .card-item{
+        width: 44%;
+        height: 250px;
+        margin: 10px 20px;
+    }
+    
+    .card-head{
+        height: 40px;
+    }
+    .title{
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .card-icon{
+        width: 40px;
+        height: 40px;
+        margin-right: 24px;
+    }
+    
+    .card-desc{
+        width: auto;
+        height: 40px;
+        margin: 24px 0px;
+        font-size: 18px;
+    }
+    
+    .card-foot{
+        padding: 5px 12px;
+        font-size: 14px;
+    }
+
+    .navbar {
+    height: 40px;
+    padding: 0 20px;
+    font-size: 15px;
+    }
+    
+    .navbar-left a {
+    margin-right: 0;
+    }
+    
+    
+    .navbar-right{
+        font-size: 14px;
+    }
+    
+    
+    .sort-order
+    {
+        height: 30px;
+        width: 90px;
+        font-size: 14px;
+    }
+   
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .card-contain{
+        padding: 48px 24px;
+    }
+
+    .card-item{
+        width: 44%;
+        height: 300px;
+        margin: 10px 20px;
+    }
+    
+    .card-head{
+        height: 60px;
+    }
+    .title{
+        height: 60px;
+        font-size: 21px;
+    }
+    
+    .card-icon{
+        width: 60px;
+        height: 60px;
+        margin-right: 24px;
+    }
+    
+    .card-desc{
+        width: auto;
+        height: 60px;
+        margin: 24px 0px;
+        font-size: 19px;
+    }
+    
+    .card-foot{
+        padding: 5px 12px;
+        font-size: 15px;
+    }
+
+    .navbar {
+    height: 50px;
+    padding: 0 20px;
+    font-size: 17px;
+    }
+    
+    .navbar-left a {
+    margin-right: 0;
+    }
+    
+    
+    .navbar-right{
+        font-size: 16px;
+    }
+    
+    
+    .sort-order
+    {
+        height: 40px;
+        width: 120px;
+        font-size: 17px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .card-contain{
+        padding: 48px 24px;
+    }
+
+    .card-item{
+        width: 30%;
+        height: 320px;
+        margin: 10px 20px;
+    }
+    
+    .card-head{
+        height: 70px;
+    }
+    .title{
+        height: 70px;
+        font-size: 24px;
+    }
+    
+    .card-icon{
+        width: 70px;
+        height: 70px;
+        margin-right: 24px;
+    }
+    
+    .card-desc{
+        width: auto;
+        height: 80px;
+        margin: 24px 0px;
+        font-size: 20px;
+    }
+    
+    .card-foot{
+        padding: 5px 12px;
+        font-size: 17px;
+    }
+
+    .navbar {
+    height: 50px;
+    padding: 0 20px;
+    font-size: 20px;
+    }
+    
+    .navbar-left a {
+    margin-right: 0;
+    }
+    
+    
+    .navbar-right{
+        font-size: 18px;
+    }
+    
+    
+    .sort-order
+    {
+        height: 40px;
+        width: 150px;
+        font-size: 20px;
+    }
+}
+
+a:hover{
+    cursor: pointer;
+}

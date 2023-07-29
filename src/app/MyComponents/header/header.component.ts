@@ -15,4 +15,5 @@ export class HeaderComponent implements OnInit  {
     console.log('working fine')
     // this.router.navigate(['/page1']); // Replace 'page1' with the route path of the page you want to navigate to
   }
+
 }

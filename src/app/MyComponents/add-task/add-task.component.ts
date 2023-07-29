@@ -14,8 +14,8 @@ export class AddTaskComponent {
   {
     // console.warn(data)
     this.taskList.addtasks(data).subscribe((result)=>{
-      console.warn(result)
+      console.warn(result);
+      this.router.navigateByUrl('');
     })
-    this.router.navigateByUrl('');
   }
 }

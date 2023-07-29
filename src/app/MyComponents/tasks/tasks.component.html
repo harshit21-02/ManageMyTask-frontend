@@ -1,22 +1,13 @@
 
   <div class="navbar">
-    <div class="navbar-left">
-      <a href="" class="active" id="allSubmissionsLink">All Tasks</a>
-      <a href="" id="favoriteSubmissionsLink">Must Do Tasks</a>
+    <div class="navbar-left" *ngFor="let n of list" (click)="select(n)" [ngClass]="{active: isActive(n)}">
+      <a>{{n}}</a>
     </div>
-    <div class="navbar-right">
-        <form action="/" method="POST" id="myform">
-            <label for="search"></label>
-            <input type="text" id="search-query" name="search-query" namespace="Search">
-        <div class="dropdown">
-        <select id="order" name="order">
-          <option value="none">Sort by</option>
-          <option value="newest">Newest</option>
-          <option value="oldest">Oldest</option>
+    <button (click)="exportToCSV()"> Download </button>
+    <div class="navbar-right"><b>SORT BY : </b> 
+        <select  class="sort-order" (change)="taskSortByParam(input_param)" [(ngModel)]="input_param">
+          <option *ngFor="let p of param" [ngValue]="p">{{p}}</option>
         </select>
-        <button type="submit" class="search-button"></button>
-        </div>
-    </form>
     </div>
   </div>
 
@@ -26,9 +17,11 @@
     <div *ngFor="let task of tasks">
       <a routerLink='details/{{task.id}}'>
         <div div class="card-item" >
-        <div class="card-head">
-            <img src="../../../assets/images/task_762686.png" class="card-icon" alt="card-logo">
-            {{task.title}}
+            <div class="card-head">
+              <img src="../../../assets/images/task_762686.png" class="card-icon" alt="card-logo">
+              <div class="title">
+              {{task.title}}
+              </div>
         </div>
 
         <div class="card-desc">
@@ -41,7 +34,7 @@
         <div class="card-foot">
             Status: {{ task.status === 1 ? 'To-Do' : task.status === 2 ? 'In-Progress' : 'Completed' }}
         </div>
-        <br>
+        <div></div>
         <div class="card-foot" >Due till {{task.due_date}}
         </div>
       </div>
@@ -53,3 +46,5 @@
         NO CARDS FOUND
     </div> -->
 </div>
+
+

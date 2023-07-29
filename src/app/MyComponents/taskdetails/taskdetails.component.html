@@ -1,14 +1,13 @@
 <div class="card-contain">
     
     <!-- <div *ngFor="let task of tasks"> -->
-      
-    <div class="card-item" >
+       
+    <div class="card-item">
         <div class="card-head">
             <img src="../../../assets/images/task_762686.png" class="card-icon" alt="card-logo">
-            
-        </div>
-        <div class="card-head">
-            <p style="font-size: 40px; display: inline; margin-left: 25%;"><b>{{tasks.title}}</b></p>
+            <div class="card-title">
+                {{tasks.title}}
+            </div>
         </div>
 
         <div class="card-desc">
@@ -23,9 +22,9 @@
         </div>
         <br>
         <div class="card-foot" >Due till {{tasks.due_date}}
+       </div>
     </div>
-    </div>
-    
+
     <div class="input-button" style="text-align: center;"> 
         <button type="submit" class="upload-button" (click)="deletetask()">Delete Task</button>
     </div>
@@ -75,12 +74,16 @@
         
         </form>
     </div>
-        <br><br>
-        <h2 style="text-align: center;"><b>HISTORY</b></h2>
         
+    </div>    
 
-        <div class="history-card-item" *ngFor="let logs of history">
-
+    <!-- <br><br>
+         -->
+    <div class="history-container"> 
+        
+        <h2 class="fixed-heading" style="text-align: center;"><b>HISTORY</b></h2>
+    <div class="scroll-box">
+        <div class="history-card-item" *ngFor="let logs of history"> 
             <div class="history-box" >
                 <h4><b>{{logs.action}}</b></h4>
                 <dl>
@@ -105,8 +108,9 @@
                 
             </div>
         </div>
+    </div>
+    </div>
 
-</div>
     <!-- <div class="card-item">
         NO CARDS FOUND
     </div> -->
