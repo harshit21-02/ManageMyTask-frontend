@@ -5,12 +5,12 @@ import { HttpClient } from '@angular/common/http'
   providedIn: 'root'
 })
 export class TaskListService {
-  getall="http://manage-my-task-backend.vercel.app/tasks/get-todo-list"
-  additem="http://manage-my-task-backend.vercel.app/tasks/create-todo-item"
-  getitem="http://manage-my-task-backend.vercel.app/tasks/get-todo-item/"
-  updateitem="http://manage-my-task-backend.vercel.app/tasks/update-todo-item"
-  deleteitem="http://manage-my-task-backend.vercel.app/tasks/delete-todo-item/"
-  gethistory="http://manage-my-task-backend.vercel.app/tasks/log-deatils/"
+  getall="https://manage-my-task-backend.vercel.app/tasks/get-todo-list"
+  additem="https://manage-my-task-backend.vercel.app/tasks/create-todo-item"
+  getitem="https://manage-my-task-backend.vercel.app/tasks/get-todo-item/"
+  updateitem="https://manage-my-task-backend.vercel.app/tasks/update-todo-item"
+  deleteitem="https://manage-my-task-backend.vercel.app/tasks/delete-todo-item/"
+  gethistory="https://manage-my-task-backend.vercel.app/tasks/log-deatils/"
   constructor(private http: HttpClient) { }
 
   tasks()
