@@ -1,6 +1,14 @@
 import { Component, ChangeDetectorRef, NgZone } from '@angular/core';
 import { TaskListService } from '../../services/task-list.service'
 import * as Papa from 'papaparse'; // Import papaparse library
+import { Time } from '@angular/common';
+import { DeclarationListEmitMode } from '@angular/compiler';
+import { Store } from '@ngrx/store';
+import { Task } from '../state/interface';
+import { addtask, alltask } from '../state/task.actions';
+import { selectTasks } from '../state/selectors';
+
+
 
 @Component({
   selector: 'app-tasks',
@@ -8,7 +16,7 @@ import * as Papa from 'papaparse'; // Import papaparse library
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent {
-  tasks: any;
+  tasks: Task[]=[];
   param: Array<string> = ['Priority','Status','Due Date'];
   input_param: any;
   list: any;
@@ -16,13 +24,14 @@ export class TasksComponent {
 
   constructor(private taskList: TaskListService, 
     private changeDetectorRef: ChangeDetectorRef,
-    private ngZone: NgZone)
+    private ngZone: NgZone,
+    private store: Store)
   {
-
-    taskList.tasks().subscribe((data)=>{
-      console.warn("data",data)
-      this.tasks=data
-    });
+    // console.log("hello")
+    // taskList.tasks().subscribe((data)=>{
+    //   console.warn("data",data)
+    //   this.tasks=data
+    // });
 
     this.list = [
       'All Tasks',
@@ -30,30 +39,28 @@ export class TasksComponent {
 
   }
 
+  ngOnInit() {
+    // Subscribe to the selectTasks selector to get the tasks data from the store
+    this.store.select(selectTasks).subscribe((tasks: Task[]) => {
+      this.tasks = tasks;
+      console.log("selector",tasks)
+    });
+    
+    if (this.tasks.length === 0) {
+      console.log("HELLOOO")
+      this.store.dispatch(alltask());
+    }
+    
+  }
+
   select(item: any) {
     this.selected = item; 
   };
   isActive(item: any) {
-      console.log(item)
       return this.selected === item;
   };
-
-  // ngOnInit() {
-  //   // Fetch data from the API
-  //   this.ngZone.run(() => {
-  //     this.changeDetectorRef.detectChanges();
-  //   });
-  //   this.taskList.tasks().subscribe((data)=>{
-  //     console.warn("data1",data)
-  //     this.tasks=data;
-      
-  //     // console.log('sorting',this.taskSortByParam(this.tasks.'due_date'));
-  //   });
-  // }
-
   
   taskSortByParam(prm: any) {
-    console.log(prm);
     const mapping = {
       'Status': 'status',
       'Priority': 'Priority',
